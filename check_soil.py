@@ -1,5 +1,6 @@
-from machine import Pin, ADC
 import time
+
+from machine import Pin, ADC
 
 led = Pin(2, Pin.OUT)
 moisture_lvl_analog = ADC(0)
@@ -29,7 +30,11 @@ def test_soil():
     print("Moisture level analog is {}".format(moisture_lvl_analog.read()))
     if moisture_lvl_analog.read() < 500:
         dont_water()
+        outcome = "Not Watered"
     else:
         water()
+        outcome = "Watered"
+
     adc_power.off()
     led.value(0)
+    return {'value1': moisture_lvl_analog.read(), 'value2': outcome}
