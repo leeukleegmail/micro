@@ -6,4 +6,4 @@ from send_ifttt_message import send_message
 enable_network()
 measurements = test_soil()
 send_message(measurements)
-deep_sleep(100000)
+deep_sleep(1000000)
