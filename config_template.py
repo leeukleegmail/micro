@@ -1,4 +1,4 @@
-# rename file to credentials.py
+# rename file to config.py
 # usage
 # import credentials
 # credentials.ssid, credentials.password

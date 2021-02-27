@@ -1,12 +1,12 @@
 import network
 import time
-import credentials
+import config
 
 
 def enable_network():
     sta_if = network.WLAN(network.STA_IF)
     sta_if.active(True)
-    sta_if.connect(credentials.ssid, credentials.password)
+    sta_if.connect(config.ssid, config.password)
     sta_if.ifconfig()
     x = 0
     while not sta_if.isconnected() and x < 10:
