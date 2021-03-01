@@ -26,9 +26,13 @@ def dont_water():
 
 def test_soil():
     adc_power.on()
+    time.sleep(2)
+    actual_moisture_level_analog = moisture_lvl_analog.read()
+
     print("Moisture level digital is {}".format(moisture_lvl_digital.value()))
-    print("Moisture level analog is {}".format(moisture_lvl_analog.read()))
-    if moisture_lvl_analog.read() < 500:
+    print("Moisture level analog is {}".format(actual_moisture_level_analog))
+    
+    if actual_moisture_level_analog < 500:
         dont_water()
         outcome = "Not Watered"
     else:
