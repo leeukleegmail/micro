@@ -1,8 +1,9 @@
+from adc import measure_value_adc
 from check_soil import test_soil
+from config import network_enabled, ifttt_enabled, sleep_after_measure, measure_soil, temperature_enabled
 from deep_sleep import deep_sleep
 from network_setup import enable_network
 from send_ifttt_message import send_message
-from config import network_enabled, ifttt_enabled, sleep_after_measure, measure_soil, temperature_enabled
 from temperature import measure_temperature
 
 measurements = ""
@@ -18,3 +19,5 @@ if ifttt_enabled:
 if sleep_after_measure:
     deep_sleep(1000000)
 
+print("in main")
+measure_value_adc()
