@@ -41,4 +41,4 @@ def test_soil():
 
     adc_power.off()
     led.value(0)
-    return {'value1': moisture_lvl_analog.read(), 'value2': outcome}
+    return {'value1': actual_moisture_level_analog, 'value2': outcome}
