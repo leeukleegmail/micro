@@ -9,4 +9,6 @@ password = "abcd"
 ifttt_enabled = True
 ifttt_api_key = "1234"
 ifttt_webhook_name = "9876"
-temperature_enabled = True
+temperature_enabled = False
+sleep_after_measure = True
+measure_soil = True
